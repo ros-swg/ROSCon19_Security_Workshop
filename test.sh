@@ -4,4 +4,4 @@ docker run -it --rm \
   --volume `pwd`:/srv/jekyll \
   --net=host \
   jekyll/builder \
-  jekyll serve --watch
+  jekyll serve --baseurl '' --watch
