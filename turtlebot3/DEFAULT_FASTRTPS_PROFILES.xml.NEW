@@ -1,0 +1,107 @@
+<profiles>
+  <participant profile_name="default_xrce_participant_profile">
+    <rtps>
+      <builtin>
+        <leaseDuration>
+          <durationbyname>INFINITE</durationbyname>
+        </leaseDuration>
+        <domainId>0</domainId>
+      </builtin>
+      <name>turtlebot3_openrc</name>
+      <propertiesPolicy>
+      <properties>
+        <property>
+          <name>dds.sec.auth.plugin</name>
+          <value>builtin.PKI-DH</value>
+          <propagate>true</propagate>
+        </property>
+        <property>
+          <name>dds.sec.crypto.plugin</name>
+          <value>builtin.AES-GCM-GMAC</value>
+          <propagate>true</propagate>
+        </property>
+        <property>
+          <name>dds.sec.access.plugin</name>
+          <value>builtin.Access-Permissions</value>
+          <propagate>true</propagate>
+        </property>
+        <property>
+          <name>dds.sec.auth.builtin.PKI-DH.identity_ca</name>
+          <value>/home/pi/keymint_ws/install/turtlebot3_openrc/ca.cert.pem</value>
+          <propagate>true</propagate>
+        </property>
+        <property>
+          <name>dds.sec.auth.builtin.PKI-DH.identity_certificate</name>
+          <value>/home/pi/keymint_ws/install/turtlebot3_openrc/cert.pem</value>
+          <propagate>true</propagate>
+        </property>
+        <property>
+          <name>dds.sec.auth.builtin.PKI-DH.private_key</name>
+          <value>/home/pi/keymint_ws/install/turtlebot3_openrc/key.pem</value>
+          <propagate>true</propagate>
+        </property>
+        <property>
+          <name>dds.sec.access.builtin.Access-Permissions.permissions_ca</name>
+          <value>/home/pi/keymint_ws/install/turtlebot3_openrc/ca.cert.pem</value>
+          <propagate>true</propagate>
+        </property>
+        <property>
+          <name>dds.sec.access.builtin.Access-Permissions.governance</name>
+          <value>/home/pi/keymint_ws/install/turtlebot3_openrc/governance.p7s</value>
+          <propagate>true</propagate>
+        </property>
+        <property>
+          <name>dds.sec.access.builtin.Access-Permissions.permissions</name>
+          <value>/home/pi/keymint_ws/install/turtlebot3_openrc/permissions.p7s</value>
+          <propagate>true</propagate>
+        </property>
+        <!-- Also set via the governace file
+        https://github.com/eProsima/Fast-RTPS/blob/ea57f15aaf689144cb8e75aa8d23e7b6ed832b3a/src/cpp/security/accesscontrol/Permissions.cpp#L591-L592-->
+        <!-- <property>
+          <name>rtps.participant.rtps_protection_kind</name>
+          <value>ENCRYPT</value>
+          <propagate>true</propagate>
+        </property>
+        <property>
+          <name>rtps.endpoint.submessage_protection_kind</name>
+          <value>ENCRYPT</value>
+          <propagate>true</propagate>
+        </property>
+        <property>
+          <name>rtps.endpoint.payload_protection_kind</name>
+          <value>ENCRYPT</value>
+          <propagate>true</propagate>
+        </property> -->
+      </properties>
+    </propertiesPolicy>
+    </rtps>
+  </participant>
+  <!-- <publisher profile_name="default_xrce_publisher_profile">
+    <topic>
+      <kind>WITH_KEY</kind>
+      <name>Square</name>
+      <dataType>ShapeType</dataType>
+      <historyQos>
+        <kind>KEEP_LAST</kind>
+        <depth>5</depth>
+      </historyQos>
+      <durability>
+        <kind>TRANSIENT_LOCAL</kind>
+      </durability>
+    </topic>
+  </publisher>
+  <subscriber profile_name="default_xrce_subscriber_profile">
+    <topic>
+      <kind>WITH_KEY</kind>
+      <name>Square</name>
+      <dataType>ShapeType</dataType>
+      <historyQos>
+        <kind>KEEP_LAST</kind>
+        <depth>5</depth>
+      </historyQos>
+      <durability>
+        <kind>TRANSIENT_LOCAL</kind>
+      </durability>
+    </topic>
+  </subscriber> -->
+</profiles>
