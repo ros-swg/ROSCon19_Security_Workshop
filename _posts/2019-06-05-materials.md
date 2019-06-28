@@ -10,21 +10,30 @@ fa-icon: book
 ## Examples
 
  * Turtlebot3 Session:
-   * [github.com/ruffsl/IROS2018_SROS2_Tutorial](https://github.com/ruffsl/IROS2018_SROS2_Tutorial)
+   * [github.com/ros-swg/ROSCon19_Security_Workshop](https://github.com/ros-swg/ROSCon19_Security_Workshop)
+
+<!--
  * Demos
    * [github.com/ruffsl/ros2_docker_demos](https://github.com/ruffsl/ros2_docker_demos)
+-->
 
 ## Supplemental
+
+
+# **TO BE updated for this workshop**
+
+<!--
 
 ### [ROSCon 2018 Madrid: Leveraging DDS Security in ROS2](https://vimeo.com/292703074)
 
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/292703074" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
 
 > The ROS2 Middleware Interface (rmw) uses OMG Data-Distribution Service (DDS) standard middleware and the DDS-RTPS protocol. One key aspect of DDS is the support for secure communications defined by the DDS-Security standard. This presentation describes the main characteristics of DDS-Security: How applications are identified and authenticated, access control mechanisms, and dataflow protection options (e.g., encryption, authentication, origin authentication). We will describe interesting scenarios and how they would impact the deployment of secure ROS2 systems that leverage DDS-Security. We also include benchmarks showing the expected performance impact resulting from each of these choices.
-
+-->
 
 # References
 
+<!--
 ## Publications
 
 ### Procedurally Provisioned Access Control for Robotic Systems
@@ -72,33 +81,20 @@ address="Cham",
 
 > SROS1 is a proposed addition to the ROS1 API and ecosystem to support modern cryptography and security measures. An overview of current progress will be presented, explaining each major advancement, including: over-the-wire cryptography for all data transport, namespaced access control enforcing graph policies/restrictions, and finally process profiles using Linux Security Modules to harden a node's resource access. This chapter not only seeks to raise community awareness of the vulnerabilities in ROS1, but to provide clear instruction along designed patterns of development for using proposed solutions provided by SROS1 to advance the state of security for open source robotics subsystems.
 
-<pre>
-  <code class="ruby">
-@Inbook{White2019SROS1,
-author="White, Ruffin and Caiazza, Gianluca and Christensen, Henrik and Cortesi, Agostino",
-editor="Koubaa, Anis",
-title="SROS1: Using and Developing Secure ROS1 Systems",
-bookTitle="Robot Operating System (ROS): The Complete Reference (Volume 3)",
-year="2019",
-publisher="Springer International Publishing",
-address="Cham",
-pages="373--405",
-isbn="978-3-319-91590-6",
-doi="10.1007/978-3-319-91590-6_11",
-url="https://doi.org/10.1007/978-3-319-91590-6_11"
-}
-</code>
-</pre>
+-->
 
 ## External Links
 
 * ROS2
-  * [github.com/ros2/ros2/wiki](https://github.com/ros2/ros2/wiki)
+  * [github.com/ros2/ros2/wiki](https://index.ros.org/doc/ros2/)
 * SROS2
   * [github.com/ros2/sros2](https://github.com/ros2/sros2)
+
+<!--
 * ROS Docker Images
   * [github.com/osrf/docker_images](https://github.com/osrf/docker_images)
 * Keymint
   * [github.com/keymint/keymint_tools](https://github.com/keymint/keymint_tools)
 * ComArmor
   * [github.com/ComArmor/comarmor](https://github.com/ComArmor/comarmor)
+-->
