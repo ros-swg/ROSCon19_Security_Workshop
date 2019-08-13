@@ -7,81 +7,63 @@ fa-icon: book
 
 # Materials
 
+
+## Prerequisites for the workshop
+
+* Docker CE Installed - [Instructions](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+* A Linux based host system
+
 ## Examples
 
- * Turtlebot3 Session:
-   * [github.com/ros-swg/ROSCon19_Security_Workshop](https://github.com/ros-swg/ROSCon19_Security_Workshop)
+* Turtlebot3 Session:
+  * [github.com/ros-swg/ROSCon19_Security_Workshop](https://github.com/ros-swg/ROSCon19_Security_Workshop)
 
-<!--
- * Demos
-   * [github.com/ruffsl/ros2_docker_demos](https://github.com/ruffsl/ros2_docker_demos)
--->
 
 ## Supplemental
+
+* Aztarna:
+  * [github.com/aliasrobotics/aztarna](https://github.com/aliasrobotics/aztarna)
+* ROS2 Fuzzer:
+  * [github.com/aliasrobotics/ros2_fuzzer](https://github.com/aliasrobotics/ros2_fuzzer)
 
 
 # **TO BE updated for this workshop**
 
-<!--
 
-### [ROSCon 2018 Madrid: Leveraging DDS Security in ROS2](https://vimeo.com/292703074)
-
-<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/292703074" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-
-> The ROS2 Middleware Interface (rmw) uses OMG Data-Distribution Service (DDS) standard middleware and the DDS-RTPS protocol. One key aspect of DDS is the support for secure communications defined by the DDS-Security standard. This presentation describes the main characteristics of DDS-Security: How applications are identified and authenticated, access control mechanisms, and dataflow protection options (e.g., encryption, authentication, origin authentication). We will describe interesting scenarios and how they would impact the deployment of secure ROS2 systems that leverage DDS-Security. We also include benchmarks showing the expected performance impact resulting from each of these choices.
--->
 
 # References
 
-<!--
+
 ## Publications
 
-### Procedurally Provisioned Access Control for Robotic Systems
+### Aztarna, a footprinting tool for robots
 
-<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/embed/OzPgkhH139g?rel=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; encrypted-media" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-
-> Security of robotics systems, as well as of the related middleware infrastructures, is a critical issue for industrial and domestic IoT, and it needs to be continuously assessed throughout the whole development lifecycle. The next generation open source robotic software stack, ROS2, is now targeting support for Secure DDS, providing the community with valuable tools for secure real world robotic deployments. In this work, we introduce a framework for procedural provisioning access control policies for robotic software, as well as for verifying the compliance of generated transport artifacts and decision point implementations.
+> Industry 4.0 is changing the commonly held assumption that robots are to be deployed in closed and isolated networks. When analyzed from a security point of view, the global picture is disheartening: robotics industry has not seriously allocated effort to follow good security practices in the robots produced. Instead, most manufacturers keep forwarding the problem to the end-users of these machines. As learned in previous technological revolutions, such as at the dawn of PCs or smartphones, action needs to be taken in time to avoid disastrous consequences. In an attempt to provide the robotics and security communities with the right tools to perform assessments, in this paper we present aztarna, a footprinting tool for robotics. We discuss how such tool can facilitate the process of identifying vestiges of different robots, while maintaining an extensible structure aimed for future fingerprinting extensions. With this contribution, we aim to raise awareness and interest of the robotics community, robot manufacturers and robot end-users on the need of starting global actions to embrace security. We open source the tool and disclose preliminary results that demonstrate the current insecurity landscape in industry. We argue that the robotic ecosystem is in need of generating a robot security community, conscious about good practices and empowered by the right tools.
 
 <pre>
   <code class="ruby">
-@Inproceedings{White2018Procedurally,
-author="White, Ruffin and Caiazza, Gianluca and Christensen, Henrik and Cortesi, Agostino",
-booktitle={2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
-title={Procedurally Provisioned Access Control for Robotic Systems},
-year={2018},
-volume={},
-number={},
-keywords={Cryptobotics;Cybersecurity;Networked Robots;Industrial Robots;Robot Safety;Middleware;ROS2;Secure DDS},
-month={October},
+{% raw %}
+@ARTICLE{2018arXiv181209490M,
+       author = {{Mayoral Vilches}, V{\'\i}ctor and {Olalde Mendia}, Gorka and
+         {Perez Baskaran}, Xabier and {Hern{\'a}ndez Cordero}, Alejandro and
+         {Usategui San Juan}, Lander and {Gil-Uriarte}, Endika and
+         {Olalde Saez de Urabain}, Odei and {Alzola Kirschgens}, Laura},
+        title = "{Aztarna, a footprinting tool for robots}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Cryptography and Security, Computer Science - Robotics},
+         year = "2018",
+        month = "Dec",
+          eid = {arXiv:1812.09490},
+        pages = {arXiv:1812.09490},
+archivePrefix = {arXiv},
+       eprint = {1812.09490},
+ primaryClass = {cs.CR},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2018arXiv181209490M},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
+{% endraw %}
 </code>
 </pre>
-
-
-### Penetration testing ROS
-
-> ROS is the most popular framework in robotics research and it also grows in terms of industrial use.
-This makes ROS a worthwhile target for attackers especially since security is not addressed by the core framework itself. Its open architecture and flexibility are also the reasons why ROS suffers from security issues. For example, in ROS it is possible to isolate single nodes from the rest of the application without the ROS master, the other nodes or even the node itself (i.e., its business code) noticing it. This is true for publishers, subscribers and services alike. This makes attacks very difficult to spot at runtime. Penetration testing is the most common security testing practice. The goal is to test an application for possible security flaws. To better facilitate penetration testing for ROS, we introduce ROSPenTo and Roschaos, tools that make use of the vulnerabilities of ROS and demonstrate how ROS applications can be sabotaged by an attacker. In this tutorial you will learn about the ROS XML-RPC API, which is our main attack point. You will see, how API attacks on ROS work in depth. You will get to know Roschaos and ROSPentTo, two tools, which can be used to manipulate running ROS applications.
-
-<pre>
-  <code class="ruby">
-@Inbook{Dieber2019Penetration,
-author="Dieber, Bernhard and White, Ruffin and Taurer, Sebastian and Breiling, Benjamin and Caiazza, Gianluca and Christensen, Henrik and Cortesi, Agostino",
-editor="Koubaa, Anis",
-title="Penetration testing ROS",
-bookTitle="Robot Operating System (ROS): The Complete Reference (Volume 4)",
-year="2019",
-publisher="Springer International Publishing",
-address="Cham",
-}
-</code>
-</pre>
-
-### SROS1: Using and Developing Secure ROS1 Systems
-
-> SROS1 is a proposed addition to the ROS1 API and ecosystem to support modern cryptography and security measures. An overview of current progress will be presented, explaining each major advancement, including: over-the-wire cryptography for all data transport, namespaced access control enforcing graph policies/restrictions, and finally process profiles using Linux Security Modules to harden a node's resource access. This chapter not only seeks to raise community awareness of the vulnerabilities in ROS1, but to provide clear instruction along designed patterns of development for using proposed solutions provided by SROS1 to advance the state of security for open source robotics subsystems.
-
--->
 
 ## External Links
 
@@ -89,12 +71,3 @@ address="Cham",
   * [github.com/ros2/ros2/wiki](https://index.ros.org/doc/ros2/)
 * SROS2
   * [github.com/ros2/sros2](https://github.com/ros2/sros2)
-
-<!--
-* ROS Docker Images
-  * [github.com/osrf/docker_images](https://github.com/osrf/docker_images)
-* Keymint
-  * [github.com/keymint/keymint_tools](https://github.com/keymint/keymint_tools)
-* ComArmor
-  * [github.com/ComArmor/comarmor](https://github.com/ComArmor/comarmor)
--->
