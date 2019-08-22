@@ -15,8 +15,8 @@ baseurl: /ROSCon2019_Security_Tutorial
 
 
 ### content configuration ###
-title:       "ROS2 Security Tutorial | ROSCon 2019"
-keywords:    "SROS2, Tutorial, ROSCon, 2019, security, ROS, robotics"
+title:       "ROS2 Security workshop | ROSCon 2019"
+keywords:    "Workshop, SROS2, Tutorial, ROSCon, 2019, security, ROS, robotics"
 description: "ROSCon 2019 tutorial session for securing robotics with SROS2"
 source_link: "https://ros-swg.github.io/ROSCon2019_SROS2_Tutorial/"
 favicon:     #put a path like: "img/favicon.ico"
