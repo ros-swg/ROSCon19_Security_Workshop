@@ -27,12 +27,7 @@ fa-icon: book
   * [github.com/aliasrobotics/ros2_fuzzer](https://github.com/aliasrobotics/ros2_fuzzer)
 
 
-# **TO BE updated for this workshop**
-
-
-
 # References
-
 
 ## Publications
 
