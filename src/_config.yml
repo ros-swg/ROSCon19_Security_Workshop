@@ -1,0 +1,42 @@
+---
+
+port: 4000
+host: 0.0.0.0
+safe: false
+
+
+### site serving configuration ###
+exclude: [CNAME, README.md, .gitignore]
+permalink: /:title ## disables post output
+timezone: null
+lsi: false
+markdown: kramdown
+baseurl: /ROSCon19_Security_Workshop
+
+
+### content configuration ###
+title:       "ROS2 Security workshop | ROSCon 2019"
+keywords:    "Workshop, SROS2, Tutorial, ROSCon, 2019, security, ROS, robotics"
+description: "ROSCon 2019 tutorial session for securing robotics with SROS2"
+source_link: "https://ros-swg.github.io/ROSCon19_Security_Workshop/"
+favicon:     #put a path like: "img/favicon.ico"
+touch_icon:  #put a path like: "img/apple-touch-icon.png"
+google_analytics_key: ## put YOUR key here to enable tracking! (blank to disable)
+
+
+### template colors, used site-wide via css ###
+colors:
+  black:     '#111111'
+  white:     '#f8f8f8'
+  blue:      '#49a7e9'
+  green:     '#9bcf2f'
+  purple:    '#c869bf'
+  orange:    '#fab125'
+  turquoise: '#0fbfcf'
+  backdrop:  '#37474f'
+  heavy_accent: '#616161'
+  mid_accent: '#9e9e9e'
+
+
+kramdown:
+  auto_ids:  false

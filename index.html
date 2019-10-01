@@ -1,63 +1,339 @@
----
----
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ site.title }}</title>
-	<meta name="keywords" content="{{ site.keywords }}">
-	<meta name="description" content="{{ site.description }}">
+  <title>ROS2 Security workshop | ROSCon 2019</title>
+	<meta name="keywords" content="Workshop, SROS2, Tutorial, ROSCon, 2019, security, ROS, robotics">
+	<meta name="description" content="ROSCon 2019 tutorial session for securing robotics with SROS2">
   <link rel="stylesheet" href="combo.css">
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-  {% if site.favicon %}<link rel="shortcut icon" href="{{ site.favicon }}" type="image/x-icon">{% endif %}
-	{% if site.touch_icon %}<link rel="apple-touch-icon" href="{{ site.touch_icon }}">{% endif %}
+  
+	
 </head>
 <body>
   <div id="main">
 
     <nav><ul>
-      {% for node in site.posts reversed %}
-        {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
-        <li class="p-{{id}}"><a href="#{{id}}">{{node.title}}</a></li>
-      {% endfor %}
+      
+        
+        <li class="p-intro"><a href="#intro">home</a></li>
+      
+        
+        <li class="p-when"><a href="#when">When</a></li>
+      
+        
+        <li class="p-where"><a href="#where">Where</a></li>
+      
+        
+        <li class="p-program"><a href="#program">Program</a></li>
+      
+        
+        <li class="p-materials"><a href="#materials">Materials</a></li>
+      
+        
+        <li class="p-who"><a href="#who">Who</a></li>
+      
     </ul></nav>
 
 
-    {% for page in site.posts reversed %}
-      {% capture id %}{{ page.id | remove:'/' | downcase }}{% endcapture %}
-      <div id="{{id}}" class="section p-{{id}}">
-        {% if page.icon %}
-        <div class="subtlecircle sectiondivider imaged">
-          <img src="{{page.icon}}" alt="section icon" />
-          <h5 class="icon-title">{{ page.title }}</h5>
+    
+      
+      <div id="intro" class="section p-intro">
+        
+        <div class="container center">
+          <h1>ROS2 Security Workshop | ROSCon 2019</h1>
+<p><span class="fa-stack subtlecircle" style="font-size:100px; background:rgba(255, 255, 255, 255)">
+    <i class="fa fa-lock fa-stack-1x text-backdrop"></i>
+</span></p>
+
+<!-- <div class="subtlecircle sectiondivider faicon">
+  <span class="fa-stack">
+    <i class="fa fa-circle fa-stack-2x"></i>
+    <i class="fa fa-lock fa-stack-1x"></i>
+  </span>
+</div> -->
+
+<h2>Security workshop - Demonstrating vulnerabilities and ways to protect your robots</h2>
+
+<p>This workshop will demonstrate different real-world attacks performed on robots while
+teaching techniques on how to secure them against those attacks. This will include
+teaching on how to design threat models for robotics, hardening the ROS ecosystem
+through SROS2 as well as using several penetration testing tools to verify that the
+robot is no longer vulnerable to those attacks.</p>
+
         </div>
-        {% elsif page.fa-icon %}
+      </div>
+    
+      
+      <div id="when" class="section p-when">
+        
         <div class="subtlecircle sectiondivider faicon">
           <span class="fa-stack">
             <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-{{ page.fa-icon }} fa-stack-1x"></i>
+            <i class="fa fa-clock-o fa-stack-1x"></i>
           </span>
-          <h5 class="icon-title">{{ page.title }}</h5>
+          <h5 class="icon-title">When</h5>
         </div>
-        {% endif %}
-        <div class="container {{ page.style }}">
-          {{ page.content }}
+        
+        <div class="container ">
+          <h1>Wednesday, 30th October 2019 (14:00-17:00)</h1>
+
+<p>ROSCon is a single-track 2-day conference, the 2019 edition will take place in Macao during the week preceeding IROS, from October 31st to November 1st.
+Starting with the 2019 edition, ROSCon has a pre-conference workshops half-day, this workshop will thus take place on the afternoon of October 30th.</p>
+
         </div>
       </div>
-    {% endfor %}
+    
+      
+      <div id="where" class="section p-where">
+        
+        <div class="subtlecircle sectiondivider faicon">
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-map-marker fa-stack-1x"></i>
+          </span>
+          <h5 class="icon-title">Where</h5>
+        </div>
+        
+        <div class="container center">
+          <h1>Conrad Macao, Cotai Central (room TBD):</h1>
+
+<p>For further Venue info, please visit the official ROSCon website:</p>
+<ul>
+  <li><a href="https://roscon.ros.org/#location">roscon.ros.org/location</a></li>
+</ul>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3695.463779399596!2d113.56242291495198!3d22.146411485403735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x822b049a5714ab56!2sConrad+Macao%2C+Cotai+Central!5e0!3m2!1sen!2sfr!4v1561640814073!5m2!1sen!2sfr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+
+        </div>
+      </div>
+    
+      
+      <div id="program" class="section p-program">
+        
+        <div class="subtlecircle sectiondivider faicon">
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-bookmark fa-stack-1x"></i>
+          </span>
+          <h5 class="icon-title">Program</h5>
+        </div>
+        
+        <div class="container ">
+          <h1>Schedule</h1>
+
+<ul>
+  <li><strong>TO BE UPDATED</strong></li>
+</ul>
+
+<!--
+* **Lunch Break \| 13:30 - 14:30**
+  * Break between morning and afternoon tutorials
+* **Introduction \| 14:30 - 14:45 \| Gianluca + Ruffin**
+  * Session overview
+  * Gauging the audience
+  * Logistics and reminders
+  * <a href="/ROSCon19_Security_Workshop/content/slides/Introduction.pdf">Slides</a>
+* **Motivation \| 14:45 - 15:30 \| Bernhard**
+  * Cyber threats in Robotics
+  * Existing attacks on ROS
+  * Available pentesting tools
+  * <a href="/ROSCon19_Security_Workshop/content/slides/Motivation.pdf">Slides</a>
+* **Background \| 15:30 - 16:30 \| Gerardo**
+  * Secure DDS spec from OMG
+  * Feature and performance analysis
+  * Hands on classic Shapes Demo
+  * <a href="/ROSCon19_Security_Workshop/content/slides/Background.pdf">Slides</a>
+* **Coffee Break \| 16:30 - 17:00**
+  * A chance for folks to catch up and mingle
+* **SROS2 Basics \| 17:00 - 18:00 \| Mikael**
+  * Implementation details
+  * Installation setup and runtime
+  * Simple test examples
+  * <a href="/ROSCon19_Security_Workshop/content/slides/SROS2_Basics.pdf">Slides</a>
+* **SROS2 Demos \| 18:00 - 18:30 \| Ruffin**
+  * Hands on demos and best practices
+  * Using Comarmor and Keymint
+  * Debugging and monitoring
+  * <a href="/ROSCon19_Security_Workshop/content/slides/SROS2_Demos.pdf">Slides</a>
+* **Concluding Remarks \| 18:30 - 19:00 \| Ruffin + Mikael**
+  * Future initiatives (e.g. user tooling)
+  * Design challenges (e.g. DDS mapping)
+  * Q&A and Open Discussion
+  * <a href="/ROSCon19_Security_Workshop/content/slides/Concluding_Remarks.pdf">Slides</a>
+-->
+
+        </div>
+      </div>
+    
+      
+      <div id="materials" class="section p-materials">
+        
+        <div class="subtlecircle sectiondivider faicon">
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-book fa-stack-1x"></i>
+          </span>
+          <h5 class="icon-title">Materials</h5>
+        </div>
+        
+        <div class="container ">
+          <h1>Materials</h1>
+
+<h2>Prerequisites for the workshop</h2>
+
+<ul>
+  <li>Docker CE Installed - <a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/">Instructions</a></li>
+  <li>A Linux based host system</li>
+</ul>
+
+<h2>Examples</h2>
+
+<ul>
+  <li>Turtlebot3 Session:
+    <ul>
+      <li><a href="https://github.com/ros-swg/ROSCon19_Security_Workshop">github.com/ros-swg/ROSCon19_Security_Workshop</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Supplemental</h2>
+
+<ul>
+  <li>Aztarna:
+    <ul>
+      <li><a href="https://github.com/aliasrobotics/aztarna">github.com/aliasrobotics/aztarna</a></li>
+    </ul>
+  </li>
+  <li>ROS2 Fuzzer:
+    <ul>
+      <li><a href="https://github.com/aliasrobotics/ros2_fuzzer">github.com/aliasrobotics/ros2_fuzzer</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1><strong>TO BE updated for this workshop</strong></h1>
+
+<h1>References</h1>
+
+<h2>Publications</h2>
+
+<h3>Aztarna, a footprinting tool for robots</h3>
+
+<blockquote>
+  <p>Industry 4.0 is changing the commonly held assumption that robots are to be deployed in closed and isolated networks. When analyzed from a security point of view, the global picture is disheartening: robotics industry has not seriously allocated effort to follow good security practices in the robots produced. Instead, most manufacturers keep forwarding the problem to the end-users of these machines. As learned in previous technological revolutions, such as at the dawn of PCs or smartphones, action needs to be taken in time to avoid disastrous consequences. In an attempt to provide the robotics and security communities with the right tools to perform assessments, in this paper we present aztarna, a footprinting tool for robotics. We discuss how such tool can facilitate the process of identifying vestiges of different robots, while maintaining an extensible structure aimed for future fingerprinting extensions. With this contribution, we aim to raise awareness and interest of the robotics community, robot manufacturers and robot end-users on the need of starting global actions to embrace security. We open source the tool and disclose preliminary results that demonstrate the current insecurity landscape in industry. We argue that the robotic ecosystem is in need of generating a robot security community, conscious about good practices and empowered by the right tools.</p>
+</blockquote>
+
+<pre>
+  <code class="ruby">
+
+@ARTICLE{2018arXiv181209490M,
+       author = {{Mayoral Vilches}, V{\'\i}ctor and {Olalde Mendia}, Gorka and
+         {Perez Baskaran}, Xabier and {Hern{\'a}ndez Cordero}, Alejandro and
+         {Usategui San Juan}, Lander and {Gil-Uriarte}, Endika and
+         {Olalde Saez de Urabain}, Odei and {Alzola Kirschgens}, Laura},
+        title = "{Aztarna, a footprinting tool for robots}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Cryptography and Security, Computer Science - Robotics},
+         year = "2018",
+        month = "Dec",
+          eid = {arXiv:1812.09490},
+        pages = {arXiv:1812.09490},
+archivePrefix = {arXiv},
+       eprint = {1812.09490},
+ primaryClass = {cs.CR},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2018arXiv181209490M},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+</code>
+</pre>
+
+<h2>External Links</h2>
+
+<ul>
+  <li>ROS2
+    <ul>
+      <li><a href="https://index.ros.org/doc/ros2/">github.com/ros2/ros2/wiki</a></li>
+    </ul>
+  </li>
+  <li>SROS2
+    <ul>
+      <li><a href="https://github.com/ros2/sros2">github.com/ros2/sros2</a></li>
+    </ul>
+  </li>
+</ul>
+
+        </div>
+      </div>
+    
+      
+      <div id="who" class="section p-who">
+        
+        <div class="subtlecircle sectiondivider faicon">
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-user fa-stack-1x"></i>
+          </span>
+          <h5 class="icon-title">Who</h5>
+        </div>
+        
+        <div class="container left">
+          <h1>Speakers</h1>
+
+<h2>Ruffin White | UCSD<img style="float: right;" src="/ROSCon19_Security_Workshop/img/bio/ruffin.jpg" width="200px" /></h2>
+<p>Ruffin White is a Ph.D. student in the Contextual Robotics Institute at University of California San Diego, under the direction of Dr. Henrik Christensen. Having earned his Masters of Computer Science at the Institute for Robotics \&amp; Intelligent Machines, Georgia Institute of Technology, he remains an active contributor to ROS and a collaborator with the Open Source Robotics Foundation.  His research interests include mobile robotics, with an focus on secure sub-systems design, as well as advancing repeatable and reproducible research in the field of robotics by improving development tools and standards for robotic software.</p>
+
+<div style="clear:both">&nbsp;</div>
+<h2>Mikael Arguedas | Unaffiliated<img style="float: right;" src="/ROSCon19_Security_Workshop/img/bio/mikael.jpg" width="200px" /></h2>
+<p>Mikael received his joint MSc from GeorgiaTech and ENSEA (France) in 2015 with a major in Electronics and Computer Engineering and a minor in Computer Science. He worked as a research assistant at GTRI and developed Computer Vision algorithms for detection of rigid and deformable objects. Before that, Mikael received a BS in Embedded Systems, Robotics and RTOS from IUT Cachan in 2011. He has been working on various ROS projects during the last few years. He worked at Open Robotics from 2015 to 2018 where he worked on ROS2 and more relevantly authored the SROS2 tools.</p>
+
+<div style="clear:both">&nbsp;</div>
+<h2>Thomas Moulard | AWS Robotics <img style="float: right;" src="/ROSCon19_Security_Workshop/img/bio/tmoulard.jpg" width="200px" /></h2>
+<p>Dr. Thomas Moulard is a Sr. Software Engineer at AWS Robotics, Amazon Web Services. Dr. Moulard received a Ph.D. from LAAS-CNRS in Toulouse, France in 2012 and was a Japan Society for the Promotion of Science (JSPS) Postdoctoral Research Fellow at the AIST from 2012 to 2014.
+From 2016 to 2018, Dr. Moulard worked for Alphabet/Google first as a software engineer on an undisclosed robotics project and then, as the Technical Lead of the Daydream Data Infrastructure team, designing cloud services to evaluate computer vision algorithms performance.
+In 2018, Dr. Moulard joined the AWS RoboMaker team. AWS RoboMaker is a service that makes it easy to develop, test, and deploy intelligent robotics applications at scale.</p>
+
+<div style="clear:both">&nbsp;</div>
+<h2>Odei Olalde | Alias Robotics<img style="float: right;" src="/ROSCon19_Security_Workshop/img/bio/odei.jpg" width="200px" /></h2>
+<p>Odei Olalde is the CISO at Alias Robotics, leading the offensive team and hacking robots. Prior to this role, he has been working on information security for different companies along his more than 6 year of experience. Started as a pen tester he found his way to the robotic world few years back and he has been researching and hacking robots since then.</p>
+
+<div style="clear:both">&nbsp;</div>
+<h2>Gorka Olalde | Alias Robotics<img style="float: right;" src="/ROSCon19_Security_Workshop/img/bio/gorka.jpg" width="200px" /></h2>
+<p>Gorka is a computer engineer graduated at the University of Mondragon, with a Master’s in Cloud computing and software development automation by the UNIR. He has always been passionate about technology and electronics since he was joung, tinkering with anything that had wires on it.  With a background in the financial industry, working as part of the security team of an important bank on the Basque Country, and in the security research field, with an internship at the Fraunhofer SIT institute. Now he leads the technical offensive team research as a robotics security enginner at Alias Robotics.</p>
+
+<div style="clear:both">&nbsp;</div>
+<hr />
+
+<h1>Additional Organizers</h1>
+
+<h2>Henrik Christensen | UCSD<img style="float: right;" src="/ROSCon19_Security_Workshop/img/bio/henrik.jpg" width="200px" /></h2>
+<p>Dr. Henrik I. Christensen is a Professor of Computer Science at the Department of Computer Science and Engineering University of California San Diego. He is also Director of the Institute for Contextual Robotics. Prior to his coming to the University of California San Diego he was the founding director of the Institute for Robotics and Intelligent machines (IRIM) at Georgia Institute of Technology (2006-2016). Dr. Christensen does research on systems integration, human-robot interaction, mapping and robot vision. He has published more than 300 contributions across AI, robotics and vision. His research has a strong emphasis on “real problems with real solutions.” A problem needs a theoretical model, implementation, evaluation, and translation to the real world.</p>
+
+
+        </div>
+      </div>
+    
 
 
     <div id="footer" class="section text-white">
       <div class="container">
-        {% capture foottext %} {% include footer.md %} {% endcapture %}
-        {{ foottext | markdownify }}
+        
+        
+<p>Design by Tim O’Brien <a href="http://t413.com/">t413.com</a>
+—
+<a href="https://github.com/t413/SinglePaged">SinglePaged theme</a>
+—
+this site is <a href="https://ros-swg.github.io/ROSCon19_Security_Workshop/">open source</a></p>
+
+
       </div>
     </div>
   </div>
 
-{% include analytics.html %}
+
 </body>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="site.js"></script>
