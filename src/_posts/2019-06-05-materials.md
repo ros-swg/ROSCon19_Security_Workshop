@@ -25,6 +25,8 @@ fa-icon: book
   * [github.com/aliasrobotics/aztarna](https://github.com/aliasrobotics/aztarna)
 * ROS2 Fuzzer:
   * [github.com/aliasrobotics/ros2_fuzzer](https://github.com/aliasrobotics/ros2_fuzzer)
+* ROS2 Threat Model:
+  * [design.ros2.org/articles/ros2_threat_model.html](https://design.ros2.org/articles/ros2_threat_model.html)
 
 
 # References
