@@ -40,6 +40,3 @@ colors:
 
 kramdown:
   auto_ids:  false
-
-plugins:
-  - jekyll/scholar
